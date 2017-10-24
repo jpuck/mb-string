@@ -66,4 +66,15 @@ class CaseMapTest extends TestCase
     {
         (new CaseMap)->isUpper('AB');
     }
+
+    public function test_can_transform_string_by_case_map()
+    {
+        $sample = 'This is A MiXeD CasE STRING';
+        $string = 'abҲd FGH jklқnopqRstuvwxyz0123 Тfӯ';
+        $expect = 'Abҳd fgh jKlҚnOpQrsTuVWXYZ0123 Тfӯ';
+
+        $actual = (new CaseMap($sample))->transform($string);
+
+        $this->assertSame($expect, $actual);
+    }
 }
