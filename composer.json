@@ -1,0 +1,24 @@
+{
+    "name": "jpuck/mbstring",
+    "description": "Methods for handling multibyte string manipulations.",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "ext-mbstring": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Jeff Puckett",
+            "email": "jeff@jeffpuckett.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "jpuck\\mbstring\\": "src/"
+        }
+    }
+}
